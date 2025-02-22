@@ -76,7 +76,7 @@ int main() {
             return -1;
         }
 
-        Mat trainData(totalImages, 34020, CV_32F);  // Asumimos que 34020 es el número correcto de características
+        Mat trainData(totalImages, 34020, CV_32F);  
         for (int i = 0; i < totalImages; ++i) {
             hogFileRead.read(reinterpret_cast<char*>(trainData.ptr(i)), 34020 * sizeof(float));
             if (i % 5 == 0) {
